@@ -282,7 +282,7 @@ Docker 通过存储引擎（新版本采用快照机制）的方式来实现镜�
 
 Linux 上可用的存储引1擎有 AUFS、Overlay2、Device Mapper、Btrfs 以及 ZFS。顾名思义，每种存储引擎都基于 Linux 中对应的文件系统或者块设备技术，并且每种存储引l擎都有其独有的性能特点。
 
-Docker 在Windows 上仅支持 windowsfilter一种存储引1擎，该引擎基于 NTFS 文件系统之上实现了分层和 CoW[1]。
+Docker 在Windows 上仅支持 windowsfilter一种存储引擎，该引擎基于 NTFS 文件系统之上实现了分层和 CoW[1]。
 
 下图展示了与系统显示相同的三层镜像。所有镜像层堆叠并合并，对外提供统一的视图。
 
@@ -320,4 +320,10 @@ docker run -it -v 主机目录：容器内目录
 $ docker run -it -v /home/ceshi: /home centos /bin/bash	# 启动起来时候我们可以通过docker inspect 容器id
 ```
 
-容器删除，主机储存的数据不会删除，但会占用两倍内存
+![image-20220215100110498](image-20220215100110498.png)
+
+容器与物理主机会占用两倍内存。
+
+容器删除，主机储存的数据不会删除
+
+如果 docker inspect后没有显示挂载，就说明挂载失败
