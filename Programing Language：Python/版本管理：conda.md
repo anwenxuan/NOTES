@@ -1,4 +1,4 @@
-**conda**
+# 一、conda
 
 在Linux上使用软件时，有的软件需要的版本不一样，比如Python就有2和3这两个版本的差别，在进行爬虫时，就需要python2的版本，这时可以使用conda创建一个新的环境
  conda create -n py2.7 python=2.7
