@@ -95,7 +95,7 @@ mysql/mysql-server                Optimized MySQL Server Docker images. Create�
 $ docker pull 镜像名[:tag]	# 下载镜像
 
 ~> docker pull mysql	# 不加tag，默认下载 lastest
-~ [1]> docker pull --platform linux/x86_64 mysql	# m1 mac 需要加--platform linux/x86_64
+~ [1]> docker pull --platform linux/x86_64 mysql	# m1 mac 需要加pm
 Using default tag: latest	# 如果不写tag就是latest
 latest: Pulling from library/mysql
 b380bbd43752: Pull complete	# 分层下载，docker image的核心 联合文件系统
@@ -162,7 +162,7 @@ tmo usr
 $ docker run -d centos
 	# 问题docker ps，发现 centos 停止了
 	# 常见的坑：docker 容器使用后台运行，就必须要有要一个前台进程，docker run -it centos /bin/bash 就是前台进程，可以使用docker ps查看一下有没有这个服务
-	# docker发现没有应用，就会自动停止nginx，容器启动后，发现自己没有提供服务，就会立刻停止，就是没有程序了
+	# docker发现没有应用，就会自动停止 nginx，容器启动后，发现自己没有提供服务，就会立刻停止，就是没有程序了
 	
 # 用完即删，测试
 $ docker run -i -rm container
@@ -196,6 +196,12 @@ $ docker exec -it container bashshell(bin/bash)	# 进入容器后开启一个新
 $ docker attach	container	# 进入容器正在执行的終端，不会启动新的进程！
 	# Docker attach可以attach到一个已经运行的容器的stdin(标准输入，一般指键盘输入到缓冲区里的东西)，然后进行命令执行的动作。
 	# 但是需要注意的是，如果从这个stdin中exit，会导致容器的停止。
+```
+
+### 退出容器
+
+```shell
+$ 退出时，使用 [ctrl + D]，这样会结束 docker 当前线程，容器结束，可以使用 [ctrl + P][ctrl + Q] 组合键退出而不终止容器运行
 ```
 
 

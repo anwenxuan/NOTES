@@ -1,3 +1,43 @@
+# A
+
+# B
+
+# C
+
+# D
+
+# E
+
+## email about
+
+### use
+
+https://www.cnblogs.com/Wu13241454771/p/13573601.html
+
+### 一些坑
+
+- 无法出现全部邮件
+
+![image-20220604184327577](image-20220604184327577.png)
+
+![image-20220604184351275](image-20220604184351275.png)
+
+imap4.search()命令 第二个参数有规则
+
+在查询时，如果只出现特定数量的邮件信息，看看收取选项那是不是有问题
+
+![image-20220604184433565](image-20220604184433565.png)
+
+# F
+
+
+
+# Module set
+
+packet：http://jobbole.github.io/awesome-python-cn/#_46
+
+awesome：https://github.com/vinta/awesome-python
+
 # S
 
 ## sys
